@@ -24,4 +24,10 @@ public class CameraScript : MonoBehaviour {
         cameraToTargetPos.z = target.transform.position.z -offSet;
         transform.position = Vector3.Lerp(transform.position, cameraToTargetPos, speed * Time.deltaTime); 
     }
+
+    //Zorg ervoor dat je het nieuwe target ophaalt en als parameter meegeeft in deze functie.
+    public void ChangeCameraTarget(GameObject newTarget)
+    {
+        target = newTarget;
+    }
 }
