@@ -27,4 +27,12 @@ public class InteractableScript : MonoBehaviour {
                 activated = !activated;
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.E)) {
+                activated = !activated;
+        }
+    }
 }
